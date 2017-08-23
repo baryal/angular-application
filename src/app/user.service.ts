@@ -6,9 +6,13 @@ import { Observable } from 'rxjs/Observable';
 import {Observer} from 'rxjs/Observer';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { User } from "./model/user";
 
 @Injectable()
 export class UserService {
+private userUrl:string ='https://babuaryal.herokuapp.com/';
+
+
 
   userEndpoint:string = "https://babuaryal.herokuapp.com/";
   LOGIN_PATH:string = "login";//for login
@@ -16,6 +20,10 @@ export class UserService {
   ADD_USER_PATH:string = "user/add";//to add new user
 
   constructor(private router: Router, private http:Http) { }
+  getAll():Observable<User[]>{
 
+    return null;
+}
 
 }
+
